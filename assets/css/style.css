@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    
+  }
+
+  .nav-item {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+  }
+  .nav-item2 {
+      float: right;
+  }
+  .nav-link {
+      display: flex;
+      position: relative;
+      float: right;
+  }
+
+  .container {
+      width: 70%;
+      height: 700px;
+      /* background: khaki; */
+      justify-items: center;
+  }
+
+  h2 {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 45px;
+      padding: 20px;
+
+  }
+  
+  p {
+      font-size: 18px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      
+  }
+
+  #first-question, #second-question, #third-question, #fourth-question, #fifth-question, #enter-initials,
+  #final-score {
+    height: 800px;
+    /* background: khaki; */
+    justify-content: center;
+    
+ }
+
+ button {
+    width: 200px !important;
+ }
+ 
+ .btn-primary {
+    background-color: #333366;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+ }
+
+ .btn-secondary {
+     background-color: #333366;
+     text-align: center;
+ }
+
+ .btn-primary:hover, .btn-secondary:hover {
+     background-color: #cc66ff;
+ }
+
+ .form-control {
+     width: auto;
+ }
+
+ /* .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2;
+} */
