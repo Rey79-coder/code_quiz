@@ -13,13 +13,10 @@
     font-family: Helvetica, Arial, sans-serif;
     display: flex;
   }
-  .nav-item2 {
-      float: right;
-  }
+
   .nav-link {
       display: flex;
-      position: relative;
-      float: right;
+      align-items: flex-start;
   }
 
   .container {
@@ -32,7 +29,7 @@
   h2 {
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       font-size: 45px;
-      padding: 20px;
+      padding: 80px;
 
   }
   
@@ -49,7 +46,12 @@
     height: 800px;
     /* background: khaki; */
     justify-content: center;
+    margin: 100px;
     
+ }
+
+ #second-question {
+     margin: 80px;
  }
 
  button {
@@ -75,7 +77,31 @@
  .form-control {
      width: auto;
  }
+title {
+    opacity: 0;
+}
 
+h4 {
+    margin-left: 25%;
+    opacity: .5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: larger;
+    text-align: left;
+}
  /* .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #8064A2;
 } */
+
+header {
+  padding: 20px 35px;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+  top: 0;
+  /* FOLLOWING DECLARATIONS ARE FOR SAFARI */
+  position: -webkit-sticky;
+  position: sticky; /* STICKY POSITION */
+  top: 0;
+}
+
