@@ -10,12 +10,6 @@
     <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    
-    
-    <!-- BOOTSTRAP js -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script src="./assets/js/script.js"></script>
 
 </head>
 
@@ -33,7 +27,7 @@
               <a class="nav-link active" aria-current="page" href="#website">View high score</a>
             </li>
             <li class="nav-item2">
-              <a class="nav-link" href="#timer">Timer: </a>
+              <a id="timer"class="nav-link">Timer</a>
             </li>
           </ul>
     
@@ -51,9 +45,10 @@
                 Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
                 
  <!-- CLICK THE BUTTON TO START THE QUIZ -->
-                <a href="#first-question" class="btn btn-secondary btn-lg" type="button">Start Quiz</a>
 
-                <!-- <button id="start-quiz"  type="button">Start Quiz</button> -->
+                <a href="#first-question" class="btn btn-secondary btn-lg start-quiz" type="button" id="start-quiz">Start Quiz</a>
+
+                <!-- <button id="start-btn"  type="button" class="btn btn-secondary btn-lg">Start Quiz</button> -->
 
             </div>
         
@@ -65,6 +60,8 @@
    
 <section id="first-question">
 
+            <br>
+
             <h2 class="text-left first-question">Commonly used data types DO not Include:</h2>
 
             <br>
@@ -74,52 +71,67 @@
 
 <!-- USERS SELECT ANSWER, WEBSITE GO TO THE NEXT QUESTION AND ALERT IF IT'S CORRECT! OR WRONG! -->
 
-                <button id="answer-1-1" type="button" class="btn btn-primary btn-lg btn-block">1.strings</button>
+                <button id="answer-1-1" type="button" class="btn btn-primary btn-lg btn-block" onclick=mySecond()>1.strings</button>
+
+                <!-- <a href="#second-question" class="btn btn-secondary btn-lg start-quiz" type="button">Start Quiz</a> -->
+                &nbsp;
+
+                <button id="answer-1-2" type="button" class="btn btn-primary btn-lg btn-block" onclick=mySecond()>2.booleans</button>
                 
                 &nbsp;
 
-                <button id="answer-1-2" type="button" class="btn btn-primary btn-lg btn-block">2.booleans</button>
+                <button id="answer-1-3" type="button" class="btn btn-primary btn-lg btn-block" onclick=mySecond()>3.alerts</button>
                 
                 &nbsp;
 
-                <button id="answer-1-3" type="button" class="btn btn-primary btn-lg btn-block">3.alerts</button>
-                
-                &nbsp;
-
-                <button id="answer-1-4" type="button" class="btn btn-primary btn-lg btn-block">4.numbers</button>
+                <button id="answer-1-4" type="button" class="btn btn-primary btn-lg btn-block" onclick=mySecond()>4.numbers</button>
                 
                         <!-- hoover over the button and it changes color -->
-                </div>
-
+            </div>
 
             </div>  
+
+            <br>
+            <br>
+                 
+            <!-- <hr> -->
+
+            <h4 id="end-time" class="message"></h4>
 
             </section>
 
     <!-- SECOND QUESTION -->
 <section id="second-question">
 
-            <h2 class="text-center">The condition in an if / else statement is enclosed with _______.</h2>
+            <h2 class="text-center second-question">The condition in an if / else statement is enclosed with _______.</h2>
 
             <div class="mx-auto" style="width: 200px;">
                 <div class="col-1">
 
-                 <button id="answer-2-1" type="button" class="btn btn-primary btn-lg">1.quotes</button>
+                 <button id="answer-2-1" type="button" class="btn btn-primary btn-lg" onclick=myThird()>1.quotes</button>
 
                  &nbsp;
 
-                 <button id="answer-2-2" type="button" class="btn btn-primary btn-lg">2.curly brackets</button>
+                 <button id="answer-2-2" type="button" class="btn btn-primary btn-lg" onclick=myThird()>2.curly brackets</button>
                  
                  &nbsp;
                  
-                 <button id="answer-2-3" type="button" class="btn btn-primary btn-lg">3.parenthesis</button>
+                 <button id="answer-2-3" type="button" class="btn btn-primary btn-lg" onclick=myThird()>3.parenthesis</button>
                  
                  &nbsp;
 
-                 <button id="answer-2-4" type="button" class="btn btn-primary btn-lg">4.square brackets</button>
+                 <button id="answer-2-4" type="button" class="btn btn-primary btn-lg" onclick=myThird()>4.square brackets</button>
                 
                  </div>
                  </div>
+                
+                 <br>
+                 <br>
+                 
+                 <hr>
+
+                 <h4 id="end-time-1" class="message"></h4>
+
              </section>
                          <!-- hoover over the button and it changes color -->
 
@@ -127,27 +139,34 @@
     <!-- THIRD QUESTION -->
 <section id="third-question">
 
-             <h2 class="text-center">Array in JavaScript can be used to store ______.</h2>
+             <h2 class="text-center third-question">Array in JavaScript can be used to store ______.</h2>
 
              <div class="mx-auto" style="width: 200px;">
                 <div class="col-1">
 
-                <button id="answer-3-1" type="button" class="btn btn-primary btn-lg">1.numbers and strings</button>
+                <button id="answer-3-1" type="button" class="btn btn-primary btn-lg" onclick=myFourth()>1.numbers and strings</button>
 
                 &nbsp;
 
-                <button id="answer-3-2" type="button" class="btn btn-primary btn-lg">2.other array</button>
+                <button id="answer-3-2" type="button" class="btn btn-primary btn-lg" onclick=myFourth()>2.other array</button>
                 
                 &nbsp;
                 
-                <button id="answer-3-3" type="button" class="btn btn-primary btn-lg">3.booleans</button>
+                <button id="answer-3-3" type="button" class="btn btn-primary btn-lg" onclick=myFourth()>3.booleans</button>
                 
                 &nbsp;
 
-                <button id="answer-3-4" type="button" class="btn btn-primary btn-lg">4.all of the above</button>
+                <button id="answer-3-4" type="button" class="btn btn-primary btn-lg"onclick=myFourth()>4.all of the above</button>
              
                 </div> 
               </div>
+
+              <br>
+              <br>
+                 
+              <hr>
+
+              <h4 id="end-time-2" class="message"></h4>
 
             </section>  
 
@@ -155,58 +174,72 @@
     <!-- FOURTH QUESTION -->
 <section id="fourth-question">
 
-             <h2 class="text-center">String values must be enclosed withing ______ when being assigned to variables.</h2>
+             <h2 class="text-center fourth-question">String values must be enclosed within ______ when being assigned to variables.</h2>
 
              <div class="mx-auto" style="width: 200px;">
                 <div class="col-1">
 
-                 <button id="answer-4-1" type="button" class="btn btn-primary btn-lg">1.commas</button>
+                 <button id="answer-4-1" type="button" class="btn btn-primary btn-lg" onclick=myFifth()>1.commas</button>
 
                  &nbsp;
 
-                 <button id="answer-4-2" type="button" class="btn btn-primary btn-lg">2.curly brackets</button>
+                 <button id="answer-4-2" type="button" class="btn btn-primary btn-lg" onclick=myFifth()>2.curly brackets</button>
                  
                  &nbsp;
 
-                 <button id="answer-4-3" type="button" class="btn btn-primary btn-lg">3.quotes</button>
+                 <button id="answer-4-3" type="button" class="btn btn-primary btn-lg" onclick=myFifth()>3.quotes</button>
                  
                  &nbsp;
 
-                 <button id="answer-4-4" type="button" class="btn btn-primary btn-lg">4.parenthesis</button>
+                 <button id="answer-4-4" type="button" class="btn btn-primary btn-lg" onclick=myFifth()>4.parenthesis</button>
             
                 </div>
              </div>
             
+                <br>
+                <br>
+                 
+                <hr>
+
+                <h4 id="end-time-3" class="message"></h4>
+
         </section>  
 
 
     <!-- FIFTH QUESTION -->
 <section id="fifth-question">
 
-              <h2 class="text-center">A very usefull tool used during development as debugging for printing content to the debugger is:</h2>
+              <h2 class="text-center fifth-question">A very usefull tool used during development as debugging for printing content to the debugger is:</h2>
 
               <div class="mx-auto" style="width: 200px;">
 
                 <div class="col-sm-9 p-3">
 
-                 <button id="answer-5-1" type="button" class="btn btn-primary btn-lg">1.JavaScript</button>
+                 <button id="answer-5-1" type="button" class="btn btn-primary btn-lg" onclick=myInitials()>1.JavaScript</button>
 
                  &nbsp;
 
-                 <button id="answer-5-2" type="button" class="btn btn-primary btn-lg">2.terminal/bash</button>
+                 <button id="answer-5-2" type="button" class="btn btn-primary btn-lg" onclick=myInitials()>2.terminal/bash</button>
 
                  &nbsp;
 
-                 <button id="answer-5-3" type="button" class="btn btn-primary btn-lg">3.for loops</button>
+                 <button id="answer-5-3" type="button" class="btn btn-primary btn-lg"onclick=myInitials()>3.for loops</button>
 
                  &nbsp;
 
-                 <button id="answer-5-4" type="button" class="btn btn-primary btn-lg">4.console.log</button>
+                 <button id="answer-5-4" type="button" class="btn btn-primary btn-lg" onclick=myInitials()>4.console.log</button>
                
                 </div>
               </div>
             </div>
-            
+
+                 <br>
+                 <br>
+                 
+                 <hr>
+
+                 <h4 id="end-time-4" class="message"></h4>
+
          </section>
          
   
@@ -214,16 +247,26 @@
 <section id="enter-initials">
 
               <h2 class="text-center">All done!</h2>
-              <p>Your final score is    .</p>
+              <p id="final-result">Your score:  </p>
 
-              <p>Enter initials: <input class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm example"></p>
+            <form id="your-score">
+              <p id="fresh-score">Enter initials: <input class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm example"></p>
+            </form>
 
-              <button id="submit-initials" class="btn btn-secondary" type="button">Submit</button>
+              <button id="submit" class="btn btn-secondary" type="button">Submit</button>
+              
+              <br>
+              <br>
+                 
+              <hr>
+
+              <h4 id="end-time-5" class="message"></h4>
+
              </section>  
 
  <br>
 
- <!-- RESULT OF WITH FINAL SCORE-->
+ <!-- RESULT WITH FINAL SCORE-->
  <section id="final-score">
 
             <h2 class="text-center">High scores</h2>
@@ -244,6 +287,12 @@
 </div>
 
 
+    <!-- BOOTSTRAP js -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
